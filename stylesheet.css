@@ -196,14 +196,18 @@ select {
 .calculator__btn > button {
     width: 5.6rem;
     height: 5.6rem;
+    color: black;
     border-radius: 50%;
     font-size: 36px;
+    padding: 0;
+    text-align: center;
     -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 -50px 36px -28px inset;
     box-shadow: rgba(0, 0, 0, 0.35) 0 -50px 36px -28px inset;
     border: 1px solid #cccccc;
     -webkit-transition: ease-out .5s;
     -o-transition: ease-out .5s;
     transition: ease-out .5s;
+    cursor: pointer;
 }
 .calculator__btn > button:hover {
     -webkit-transition: .5s;
