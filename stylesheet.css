@@ -208,6 +208,7 @@ select {
     -o-transition: ease-out .5s;
     transition: ease-out .5s;
     cursor: pointer;
+    user-select: none;
 }
 .calculator__btn > button:hover {
     -webkit-transition: .5s;
