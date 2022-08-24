@@ -45,7 +45,14 @@ body {
     text-rendering: optimizespeed;
     font-family: "Roboto", sans-serif;
     /*=== ===*/
+    /*
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+
+    background: linear-gradient(to right, #44a08d, #093637);
+    background: linear-gradient(to right, #3494e6, #ec6ead);
+
+     */
+    background: linear-gradient(to right, #4ca1af, #c4e0e5);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     height: 100vh;
