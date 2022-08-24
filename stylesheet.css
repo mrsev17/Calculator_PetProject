@@ -215,11 +215,15 @@ select {
     transition: .5s;
     -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
     box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
+    color: #f0f0f0;
+    background: #23a6d5;
 }
+/*
 .calculator__btn > button:active {
     color: #f0f0f0;
     background: #23a6d5;
 }
+ */
 
 #zero {
     width: 12.6rem;
