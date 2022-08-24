@@ -254,6 +254,9 @@ select {
     }
 }
 @media(max-width: 498px) {
+    .calculator {
+        margin-top: 120px;
+    }
     .calculator__screen > p {
         font-size: 36px;
     }
