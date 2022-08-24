@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *,
 *::before,
 *::after {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -52,8 +60,11 @@ body {
     background: linear-gradient(to right, #3494e6, #ec6ead);
 
      */
+    background: -webkit-gradient(linear, left top, right top, from(#4ca1af), to(#c4e0e5));
+    background: -o-linear-gradient(left, #4ca1af, #c4e0e5);
     background: linear-gradient(to right, #4ca1af, #c4e0e5);
     background-size: 400% 400%;
+    -webkit-animation: gradient 10s ease infinite;
     animation: gradient 10s ease infinite;
     height: 100vh;
 }
@@ -76,6 +87,7 @@ ol[class] {
 }
 
 a:not([class]) {
+    -webkit-text-decoration-skip: ink;
     text-decoration-skip-ink: auto;
 }
 
@@ -97,9 +109,13 @@ select {
 
 @media (prefers-reduced-motion: reduce) {
     * {
+        -webkit-animation-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
+        -webkit-animation-iteration-count: 1 !important;
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
+        -webkit-transition-duration: 0.01ms !important;
+        -o-transition-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
     }
 }
@@ -125,6 +141,7 @@ select {
     border: 1px solid transparent;
     border-radius: 35px;
     background-color: #f0f0f0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
     box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 
@@ -132,11 +149,20 @@ select {
     margin: 28px auto 0;
     width: 96%;
     height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: end;
+    background: -webkit-gradient(linear, left top, right top, from(#434343), to(black));
+    background: -o-linear-gradient(left, #434343 0%, black 100%);
     background: linear-gradient(to right, #434343 0%, black 100%);
     border-radius:25px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
     box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
 }
 .calculator__screen > p {
@@ -146,7 +172,12 @@ select {
 }
 .calculator__control {
     margin-top: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 14px;
 }
@@ -154,7 +185,11 @@ select {
 .calculator__control-second-line,
 .calculator__control-third-line,
 .calculator__control-four-line {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 18px;
 }
@@ -163,12 +198,18 @@ select {
     height: 5.6rem;
     border-radius: 50%;
     font-size: 36px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 -50px 36px -28px inset;
     box-shadow: rgba(0, 0, 0, 0.35) 0 -50px 36px -28px inset;
     border: 1px solid #cccccc;
+    -webkit-transition: ease-out .5s;
+    -o-transition: ease-out .5s;
     transition: ease-out .5s;
 }
 .calculator__btn > button:hover {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
     box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
 }
 .calculator__btn > button:active {
@@ -185,7 +226,11 @@ select {
 }
 .calculator__control-five-line {
     gap: 18px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -215,6 +260,8 @@ select {
         width: 88%;
     }
     .calculator__control {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         gap: 20px;
     }
@@ -243,6 +290,8 @@ select {
         width: 9.7rem;
     }
     .calculator__control {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         gap: 14px;
     }
@@ -264,6 +313,8 @@ select {
 }
 @media(max-width: 378px) {
     .calculator__control {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         gap: 10px;
     }
