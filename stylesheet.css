@@ -125,6 +125,16 @@ select {
     font-display: swap;
 }
 
+.welcome {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+.welcome > img {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 /* === Calculator ===*/
 
 .calculator {
@@ -244,18 +254,32 @@ select {
     .calculator {
         padding: 0;
         width: 90%;
-        margin-top: 30px;
-    }
-}
-@media(max-width: 498px) {
-    .calculator {
-        margin-top: 80px;
-    }
-    .calculator__screen > p {
-        font-size: 36px;
+        margin-top: 100px;
     }
     .calculator__screen {
-        height: 80px;
+        width: 90%;
+    }
+}
+/*
+@media(min-width: 499px) and (max-width: 680px) {
+    .calculator__screen {
+        width: 90%;
+    }
+}
+
+ */
+
+@media(max-width: 498px) {
+    .calculator {
+        width: 87%;
+        margin-top: 100px;
+    }
+    .calculator__screen > p {
+        font-size: 42px;
+    }
+    .calculator__screen {
+        width: 4rem;
+        height: 90px;
     }
     .calculator__btn > button {
         width: 5rem;
@@ -266,27 +290,36 @@ select {
         width: 88%;
     }
     .calculator__control {
+        margin-top: 30px;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
-        gap: 20px;
+        gap: 16px;
     }
     .calculator__control-first-line,
     .calculator__control-second-line,
     .calculator__control-third-line,
     .calculator__control-four-line {
-        gap: 22px;
-    }
-}
-@media(max-width: 480px) {
-    .calculator__btn > button {
-        width: 4.5rem;
-        height: 4.5rem;
+        gap: 18px;
     }
     #zero {
-        width: 10.7rem;
+        width: 11.2rem;
     }
 }
+
+@media(max-width: 480px) {
+    .calculator__screen {
+        width: 87%;
+    }
+    .calculator__btn > button {
+        width: 4.6rem;
+        height: 5.2rem;
+    }
+    #zero {
+        width: 11.2rem;
+    }
+}
+
 @media(max-width: 446px) {
     .calculator__btn > button {
         width: 4.5rem;
@@ -308,6 +341,7 @@ select {
         gap: 16px;
     }
 }
+
 @media(max-width: 412px) {
     .calculator__btn > button {
         width: 4rem;
@@ -317,6 +351,7 @@ select {
         width: 9rem;
     }
 }
+
 @media(max-width: 378px) {
     .calculator__control {
         -webkit-box-pack: justify;
@@ -341,6 +376,7 @@ select {
         width: 7.6rem;
     }
 }
+
 @media(max-width: 324px) {
     .calculator__btn > button {
         width: 3.4rem;
