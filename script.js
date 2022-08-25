@@ -4,6 +4,7 @@
 
 const screen = document.getElementById("screen");
 
+
 /* === Operators === */
 
 const clearBtn = document.getElementById("clear");
@@ -19,6 +20,8 @@ const plusMin = document.getElementById("plusMinus");
 /* === Numbers === */
 
 const one = document.getElementById("one");
+const oneClickTwo = document.getElementsByClassName("oneClickTwo");
+
 const two = document.getElementById("two");
 const three = document.getElementById("three");
 const four = document.getElementById("four");
@@ -31,47 +34,9 @@ const zero = document.getElementById("zero");
 
 /* === Work with first input === */
 
-let inputOne = [];
-let inputTwo = [];
+let firstInput = "";
+let secondInput = "";
 
 
-clearBtn.addEventListener("click", function() {
-    inputOne.length = 0;
-    screen.innerHTML = 0;
-});
-one.addEventListener("click", function () {
-    if(inputOne.length < 9) inputOne.push(1);
-    screen.innerHTML = inputOne.join("");
-});
-two.addEventListener("click", function (){
-    if(inputOne.length < 9) inputOne.push(2);
-    screen.innerHTML = inputOne.join("");
-});
-three.addEventListener("click", function (){
-    if(inputOne.length < 9) inputOne.push(3);
-    screen.innerHTML = inputOne.join("");
-});
-four.addEventListener("click", function (){
-    if(inputOne.length < 9) inputOne.push(4);
-    screen.innerHTML = inputOne.join("");
-});
-five.addEventListener("click", function (){
-    if(inputOne.length < 9) inputOne.push(5);
-    screen.innerHTML = inputOne.join("");
-});
-six.addEventListener("click", function (){
-    if(inputOne.length < 9) inputOne.push(6);
-    screen.innerHTML = inputOne.join("");
-});
-seven.addEventListener("click", function (){
-    if(inputOne.length < 9) inputOne.push(7);
-    screen.innerHTML = inputOne.join("");
-});
-eight.addEventListener("click", function (){
-    if(inputOne.length < 9) inputOne.push(8);
-    screen.innerHTML = inputOne.join("");
-});
-nine.addEventListener("click", function (){
-    if(inputOne.length < 9) inputOne.push(9);
-    screen.innerHTML = inputOne.join("");
-})
+
+
