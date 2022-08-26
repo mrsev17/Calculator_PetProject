@@ -237,10 +237,13 @@ select {
 
 @media(max-width: 680px) {
     .calculator {
-        touch-action: none;
+        touch-action: manipulation;
         padding: 0;
         width: 90%;
         margin-top: 100px;
+    }
+    .calculator__btn {
+
     }
     .calculator__screen {
         width: 90%;
