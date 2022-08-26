@@ -80,7 +80,7 @@ const takeInputFour = () => {
         a = a + 4;
         out.textContent = a;
     } else if((numFour.innerText === "4") && (a.length < 13) && (finish === true)) {
-        b = b + 5;
+        b = b + 4;
         out.textContent = b;
     }
 }
@@ -174,10 +174,10 @@ numZero.onclick = takeInputZero;
 
 const numDot = document.getElementById("dot");
 const takeInputDot = () => {
-    if((numDot.innerText === ".") && (a.length < 13) && (finish === false)) {
+    if((numDot.innerText === ".") && (a.length < 13) && (finish === false) && (!a.split("").includes("."))) {
         a = a + ".";
         out.textContent = a;
-    } else if ((numDot.innerText === ".") && (a.length < 13) && (finish === true)) {
+    } else if ((numDot.innerText === ".") && (a.length < 13) && (finish === true) && (!b.split("").includes("."))) {
         b = b + ".";
         out.textContent = b;
     }
@@ -185,6 +185,17 @@ const takeInputDot = () => {
 numDot.onclick = takeInputDot;
 
 /* ==== Operands ==== */
+
+/* === Percent === */
+
+const keyPercent = document.getElementById("percent");
+const returnPercent = () => {
+    if(+a > 0) {
+        let result = ((+a / 100));
+        out.textContent = (parseFloat(result.toPrecision(12)));
+    }
+}
+keyPercent.onclick = returnPercent;
 
 /* === PLUS === */
 
@@ -197,13 +208,55 @@ const takeInputPlus = () => {
 }
 keyPlus.onclick = takeInputPlus;
 
+/* === Minus === */
+
+const keyMinus = document.getElementById("minus");
+const takeInputMinus = () => {
+    finish = true;
+    operand = "minus";
+    out.textContent = "-";
+    console.log(a,b,operand);
+}
+keyMinus.onclick = takeInputMinus;
+
+/* === Multiply === */
+
+const keyMultiply = document.getElementById("multiply");
+const takeInputMultiply = () => {
+    finish = true;
+    operand = "multiply";
+    out.textContent = "x";
+    console.log(a,b,operand);
+}
+keyMultiply.onclick = takeInputMultiply;
+
+/* === Divide === */
+
+const keyDivide = document.getElementById("divide");
+const takeInputDivide = () => {
+    finish = true;
+    operand = "divide";
+    out.textContent = "÷";
+    console.log(a,b,operand);
+}
+keyDivide.onclick = takeInputDivide;
+
 /* === EQUAL === */
 
 const keyEqual = document.getElementById("equal");
 const showResult = () => {
     if((finish === true) && (operand === "plus")) {
         let result = +a + +b;
-        out.textContent = result.toFixed(1);
+        out.textContent = (parseFloat(result.toPrecision(12)));
+    } else if((finish === true) && (operand === "minus")) {
+        let result = +a - +b;
+        out.textContent = (parseFloat(result.toPrecision(12)));
+    } else if((finish === true) && (operand === "multiply")) {
+        let result = +a * +b;
+        out.textContent = (parseFloat(result.toPrecision(12)));
+    } else if((finish === true) && (operand === "divide")) {
+        let result = +a / +b;
+        out.textContent = (parseFloat(result.toPrecision(12)));
     }
 }
 keyEqual.onclick = showResult;
