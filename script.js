@@ -12,6 +12,8 @@ const calculatorTest = () => {
     let operand = undefined;
     let result = undefined;
 
+    let check = 0;
+
 
 // Display
 
@@ -181,7 +183,7 @@ const calculatorTest = () => {
         if((numDot.innerText === ".") && (a.length < 13) && (finish === false) && (!a.split("").includes("."))) {
             a = a + ".";
             out.textContent = a;
-        } else if ((numDot.innerText === ".") && (a.length < 13) && (finish === true) && (!b.split("").includes("."))) {
+        } else if ((numDot.innerText === ".") && (b.length < 13) && (finish === true) && (!b.split("").includes("."))) {
             b = b + ".";
             out.textContent = b;
         }
@@ -229,6 +231,13 @@ const calculatorTest = () => {
 
     const keyMultiply = document.getElementById("multiply");
     const takeInputMultiply = () => {
+        if((finish === true) && (operand === "multiply") && (check === 0)) {
+            check += 1;
+            result = +a * +b;
+            a = result;
+            out.textContent = (parseFloat(result.toPrecision(12)));
+            return;
+        }
         finish = true;
         operand = "multiply";
         out.textContent = "x";

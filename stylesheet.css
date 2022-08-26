@@ -241,8 +241,8 @@ select {
         width: 90%;
         margin-top: 100px;
     }
-    .calculator__btn {
-
+    .calculator__btn > button {
+        touch-action: manipulation;
     }
     .calculator__screen {
         width: 90%;
