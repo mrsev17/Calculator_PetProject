@@ -7,8 +7,8 @@
         let b = "";
         let sign = "";
         let finish = false;
-        let operand = undefined;
-        let result = undefined;
+        let operand = null;
+        let result = null;
         let check = 0;
 
         /* ==== Display ==== */
@@ -21,7 +21,6 @@
             sign = "";
             finish = false;
             out.textContent = 0;
-            console.log("Clear All")
         }
         allClearBtn.onclick = clearAll;
 
@@ -32,11 +31,9 @@
             if ((numOne.innerText === "1") && (a.length < 10) && (finish === false)) {
                 a = a + 1;
                 out.textContent = a;
-                console.log(a);
             } else if ((numOne.innerText === "1") && (b.length < 10) && (finish === true)) {
                 b = b + 1;
                 out.textContent = b;
-                console.log(b);
             }
         }
         numOne.onclick = takeInputOne;
@@ -188,7 +185,7 @@
         const keyPercent = document.getElementById("percent");
         const returnPercent = () => {
             if (+a > 0) {
-                let result = ((+a / 100));
+                let result = (+a / 100);
                 out.textContent = (parseFloat(result.toPrecision(12)));
             }
         }
@@ -202,7 +199,6 @@
             operand = "plus";
             //out.textContent = "+";
             if (+result > 0) b = "";
-            console.log(b);
         }
         keyPlus.onclick = takeInputPlus;
 
@@ -214,7 +210,6 @@
             operand = "minus";
             //out.textContent = "-";
             if (+result > 0) b = "";
-            console.log(b);
         }
         keyMinus.onclick = takeInputMinus;
 
@@ -233,7 +228,6 @@
             operand = "multiply";
             //out.textContent = "x";
             if (+result > 0) b = "";
-            console.log(b);
         }
         keyMultiply.onclick = takeInputMultiply;
 
@@ -245,7 +239,6 @@
             operand = "divide";
             //out.textContent = "÷";
             if (+result > 0) b = "";
-            console.log(b);
         }
         keyDivide.onclick = takeInputDivide;
 
