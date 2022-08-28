@@ -46,14 +46,6 @@ body {
     scroll-behavior: smooth;
     text-rendering: optimizespeed;
     font-family: "Roboto", sans-serif;
-    /*=== ===*/
-    /*
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-
-    background: linear-gradient(to right, #44a08d, #093637);
-    background: linear-gradient(to right, #3494e6, #ec6ead);
-
-     */
     background: -webkit-gradient(linear, left top, right top, from(#4ca1af), to(#c4e0e5));
     background: -o-linear-gradient(left, #4ca1af, #c4e0e5);
     background: linear-gradient(to right, #4ca1af, #c4e0e5);
@@ -62,19 +54,7 @@ body {
     animation: gradient 10s ease infinite;
     height: 100vh;
 }
-/*
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-*/
+
 ul[class],
 ol[class] {
     list-style: none;
@@ -199,16 +179,16 @@ select {
     -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 -50px 36px -28px inset;
     box-shadow: rgba(0, 0, 0, 0.35) 0 -50px 36px -28px inset;
     border: 1px solid #cccccc;
-    -webkit-transition: ease-out .5s;
-    -o-transition: ease-out .5s;
-    transition: ease-out .5s;
+    -webkit-transition: ease-out .7s;
+    -o-transition: ease-out .7s;
+    transition: ease-out .7s;
     cursor: pointer;
     user-select: none;
 }
 .calculator__btn > button:hover {
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
+    -webkit-transition: .7s;
+    -o-transition: .7s;
+    transition: .7s;
     -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
     box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
     color: #f0f0f0;
@@ -231,7 +211,6 @@ select {
     -ms-flex-pack: center;
     justify-content: center;
 }
-
 
 /* === Media === */
 
