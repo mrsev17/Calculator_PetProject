@@ -197,7 +197,7 @@
         const takeInputPlus = () => {
             finish = true;
             operand = "plus";
-            //out.textContent = "+";
+            out.textContent = "+";
             if (+result > 0) b = "";
         }
         keyPlus.onclick = takeInputPlus;
@@ -208,7 +208,7 @@
         const takeInputMinus = () => {
             finish = true;
             operand = "minus";
-            //out.textContent = "-";
+            out.textContent = "-";
             if (+result > 0) b = "";
         }
         keyMinus.onclick = takeInputMinus;
@@ -226,7 +226,7 @@
             }
             finish = true;
             operand = "multiply";
-            //out.textContent = "x";
+            out.textContent = "x";
             if (+result > 0) b = "";
         }
         keyMultiply.onclick = takeInputMultiply;
@@ -237,7 +237,7 @@
         const takeInputDivide = () => {
             finish = true;
             operand = "divide";
-            //out.textContent = "÷";
+            out.textContent = "÷";
             if (+result > 0) b = "";
         }
         keyDivide.onclick = takeInputDivide;
